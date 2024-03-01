@@ -1,0 +1,86 @@
+body {
+   background-image: url(../images/bg-space.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-color: #111;
+   color: #CCC;
+   font-family: "Handlee", cursive;
+}
+
+#app {
+   text-align: center;
+   width: 820px;
+   margin: auto;
+}
+
+.top {
+   padding: 25px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+   text-align: left;
+}
+
+.top h1 {
+   font-size: 2em;
+   margin: 0;
+   color: #fff;
+   font-family: "Acme", sans-serif;
+}
+
+.top form {
+   margin: 0;
+}
+
+.top form {
+   text-align: right;
+}
+
+.characters {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+}
+
+.characters .item {
+   padding: 20px;
+}
+
+.characters .item img {
+   width: 100%;
+   border-radius: 20%;
+   border: 5px #111 solid;
+}
+
+.characters .item img:hover {
+   border: 5px #FD4 solid;
+}
+
+.characters .item .like {
+   color: #FD4;
+   cursor: pointer;
+}
+
+.characters .item .delete {
+   color: #f65;
+   cursor: pointer;
+}
+
+input {
+   padding: 0.75em 1.25em;
+   border-radius: 8px;
+   border: none;
+   font-size: 1rem;
+   font-family: "Handlee", cursive;
+}
+
+button {
+   padding: 0.75em 1.25em;
+   border-radius: 8px;
+   background-color: #FD4;
+   color: #111;
+   font-size: 1rem;
+   border: none;
+   font-family: "Handlee", cursive;
+}
+
