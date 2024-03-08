@@ -1,5 +1,6 @@
 {
-    "guerra_mundial_z": {
+    "create": {
+        "title": "Guerra Mundial Z",
         "overview": "Um ex-investigador da ONU é forçado a voltar ao serviço para investigar o que parece ser o início de uma pandemia de zumbis.",
         "company": "Paramount Pictures",
         "release_year": 2013,
@@ -7,6 +8,7 @@
         "cover": "path/to/image.png"
     },
     "zumbilandia": {
+        "title": "Zumbilândia",
         "overview": "Em um mundo pós-apocalíptico, um grupo de sobreviventes viaja pelo país em busca de um lar seguro.",
         "company": "Columbia Pictures",
         "release_year": 2009,
@@ -14,6 +16,7 @@
         "cover": "path/to/image.png"
     },
     "exterminio": {
+        "title": "Extermínio",
         "overview": "Um vírus mortal é liberado na Grã-Bretanha, transformando quase toda a população em zumbis violentos.",
         "company": "Fox Searchlight Pictures",
         "release_year": 2002,
@@ -21,6 +24,7 @@
         "cover": "path/to/image.png"
     },
     "a_noite_dos_mortos_vivos": {
+        "title": "A Noite dos Mortos-Vivos",
         "overview": "Sete pessoas são presas em uma fazenda rural na Pensilvânia, onde são aterrorizadas por mortos-vivos.",
         "company": "Image Ten",
         "release_year": 1968,
@@ -28,6 +32,7 @@
         "cover": "path/to/image.png"
     },
     "despertar_dos_mortos": {
+        "title": "Despertar dos Mortos",
         "overview": "Os sobreviventes de uma epidemia de zumbis se refugiam em um shopping center.",
         "company": "United Film Distribution Company",
         "release_year": 1978,
@@ -35,6 +40,7 @@
         "cover": "path/to/image.png"
     },
     "eu_sou_a_lenda": {
+        "title": "Eu Sou a Lenda",
         "overview": "Anos após uma praga matar a maior parte da humanidade e transformar o resto em monstros, o único sobrevivente em Nova York luta valentemente para encontrar uma cura.",
         "company": "Warner Bros. Pictures",
         "release_year": 2007,
@@ -42,6 +48,7 @@
         "cover": "path/to/image.png"
     },
     "resident_evil_o_hospede_maldito": {
+        "title": "Resident Evil: O Hóspede Maldito",
         "overview": "Uma equipe militar especial luta contra uma poderosa supercomputador fora de controle e centenas de cientistas que se tornaram zumbis carnívoros após um vazamento de laboratório.",
         "company": "Screen Gems",
         "release_year": 2002,
@@ -49,6 +56,7 @@
         "cover": "path/to/image.png"
     },
     "planeta_terror": {
+        "title": "Planeta Terror",
         "overview": "Depois de um acidente experimental, um grupo de pessoas tenta sobreviver ao ataque de zumbis.",
         "company": "Dimension Films",
         "release_year": 2007,
@@ -56,6 +64,7 @@
         "cover": "path/to/image.png"
     },
     "madrugada_dos_mortos": {
+        "title": "Madrugada dos Mortos",
         "overview": "Um pequeno grupo de sobreviventes se refugia em um shopping center após o mundo ser dominado por zumbis.",
         "company": "Universal Pictures",
         "release_year": 2004,
