@@ -2,7 +2,7 @@ const { test } = require("@playwright/test");
 
 const data = require("../support/fixtures/movies.json");
 
-const { executeSQL } = require("../support/fixtures/database")
+const { executeSQL } = require("../support/database")
 
 const { LoginPage } = require("../pages/LoginPage");
 const { MoviesPage } = require("../pages/MoviesPage");
