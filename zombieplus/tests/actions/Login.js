@@ -6,6 +6,12 @@ export class Login {
         this.page = page;
     }
 
+    async do(email, password) {
+        this.visit()
+        this.submit(email, password)
+        this.isLoggedIn()
+    }
+
     async visit() {
         await this.page.goto("http://localhost:3000/admin/login")
         const loginForm = this.page.locator('.login-form')
@@ -24,7 +30,7 @@ export class Login {
     }
 
     async isLoggedIn() {
-        await this.page.waitForLoadState("networkidle");
+        await this.page.waitForLoadState("domcontentloaded");
         await expect(this.page).toHaveURL(/.*admin/);
       }
 }
