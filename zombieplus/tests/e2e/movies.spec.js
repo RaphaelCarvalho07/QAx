@@ -7,7 +7,7 @@ test("deve poder cadastrar um novo filme", async ({ page }) => {
   const movie = data.create;
   await executeSQL(`DELETE from movies where title = '${movie.title}'`);
 
-  await page.login.do("admin@zombieplus.com", "pwd123");
+  await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
   
   await page.movies.create(movie);
   await page.toast.containText("Cadastro realizado com sucesso!");
@@ -16,7 +16,7 @@ test("deve poder cadastrar um novo filme", async ({ page }) => {
 test("não deve cadastrar filme quando os campos obrigatórios não são preenchidos", async ({
   page,
 }) => {
-  await page.login.do("admin@zombieplus.com", "pwd123");
+  await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
   await page.movies.goForm();
   await page.movies.submit();
 
