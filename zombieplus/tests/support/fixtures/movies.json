@@ -7,6 +7,14 @@
         "featured": true,
         "cover": "/covers/movies/wwz.png"
     },
+    "duplicate": {
+        "title": "Resident Evil: O Hóspede Maldito",
+        "overview": "Uma equipe militar especial luta contra uma poderosa supercomputador fora de controle e centenas de cientistas que se tornaram zumbis carnívoros após um vazamento de laboratório.",
+        "company": "Columbia Pictures",
+        "release_year": 2002,
+        "featured": false,
+        "cover": "/covers/movies/resident-evil.jpg"
+    },
     "zumbilandia": {
         "title": "Zumbilândia",
         "overview": "Em um mundo pós-apocalíptico, um grupo de sobreviventes viaja pelo país em busca de um lar seguro.",
@@ -44,14 +52,6 @@
         "overview": "Anos após uma praga matar a maior parte da humanidade e transformar o resto em monstros, o único sobrevivente em Nova York luta valentemente para encontrar uma cura.",
         "company": "Warner Bros. Pictures",
         "release_year": 2007,
-        "featured": false,
-        "cover": "path/to/image.png"
-    },
-    "resident_evil_o_hospede_maldito": {
-        "title": "Resident Evil: O Hóspede Maldito",
-        "overview": "Uma equipe militar especial luta contra uma poderosa supercomputador fora de controle e centenas de cientistas que se tornaram zumbis carnívoros após um vazamento de laboratório.",
-        "company": "Screen Gems",
-        "release_year": 2002,
         "featured": false,
         "cover": "path/to/image.png"
     },
