@@ -4,8 +4,8 @@
         "overview": "Um ex-investigador da ONU é forçado a voltar ao serviço para investigar o que parece ser o início de uma pandemia de zumbis.",
         "company": "Paramount Pictures",
         "release_year": 2013,
-        "featured": false,
-        "cover": "path/to/image.png"
+        "featured": true,
+        "cover": "/covers/movies/wwz.png"
     },
     "zumbilandia": {
         "title": "Zumbilândia",
