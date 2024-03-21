@@ -54,6 +54,5 @@ export class Api {
     });
 
     expect(response.ok()).toBeTruthy();
-    // return await response.json();
   }
 }
