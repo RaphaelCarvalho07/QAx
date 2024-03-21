@@ -15,6 +15,14 @@
         "featured": false,
         "cover": "/covers/movies/resident-evil.jpg"
     },
+    "to_remove": {
+        "title": "A Noite dos Mortos-Vivos",
+        "overview": "Sete pessoas são presas em uma fazenda rural na Pensilvânia, onde são aterrorizadas por mortos-vivos.",
+        "company": "Universal Pictures",
+        "release_year": 1968,
+        "featured": false,
+        "cover": "/covers/movies/mortos-vivos"
+    },
     "zumbilandia": {
         "title": "Zumbilândia",
         "overview": "Em um mundo pós-apocalíptico, um grupo de sobreviventes viaja pelo país em busca de um lar seguro.",
@@ -28,14 +36,6 @@
         "overview": "Um vírus mortal é liberado na Grã-Bretanha, transformando quase toda a população em zumbis violentos.",
         "company": "Fox Searchlight Pictures",
         "release_year": 2002,
-        "featured": false,
-        "cover": "path/to/image.png"
-    },
-    "a_noite_dos_mortos_vivos": {
-        "title": "A Noite dos Mortos-Vivos",
-        "overview": "Sete pessoas são presas em uma fazenda rural na Pensilvânia, onde são aterrorizadas por mortos-vivos.",
-        "company": "Image Ten",
-        "release_year": 1968,
         "featured": false,
         "cover": "path/to/image.png"
     },
