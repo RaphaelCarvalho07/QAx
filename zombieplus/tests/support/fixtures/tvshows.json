@@ -1,0 +1,47 @@
+{
+    "create": {
+        "title": "The Walking Dead",
+        "overview": "Em um mundo pós-apocalíptico, um grupo de sobreviventes luta para sobreviver contra hordas de zumbis.",
+        "company": "Amazon Studios",
+        "release_year": 2010,
+        "featured": true,
+        "cover": "/covers/tvshows/twd.png",
+        "seasons": 11
+    },
+    "fear_the_walking_dead": {
+        "title": "Fear the Walking Dead",
+        "overview": "Um spin-off de The Walking Dead, situado em Los Angeles, seguindo dois famílias que devem se unir para sobreviver ao apocalipse zumbi.",
+        "company": "Lionsgate Films",
+        "release_year": 2015,
+        "featured": true,
+        "cover": "/covers/tvshows/ftwd.png",
+        "seasons": 7
+    },
+    "z_nation": {
+        "title": "Z Nation",
+        "overview": "Três anos após o apocalipse zumbi, um grupo de sobreviventes transporta o único humano conhecido que não foi infectado na esperança de usar seu sangue para criar uma vacina.",
+        "company": "Walt Disney Studios",
+        "release_year": 2014,
+        "featured": false,
+        "cover": "/covers/tvshows/znation.png",
+        "seasons": 5
+    },
+    "black_summer": {
+        "title": "Black Summer",
+        "overview": "Nos primeiros dias de um apocalipse zumbi, uma mãe se separa de sua filha e embarca em uma jornada angustiante para encontrá-la.",
+        "company": "Netflix",
+        "release_year": 2019,
+        "featured": false,
+        "cover": "/covers/tvshows/black-summer.png",
+        "seasons": 2
+    },
+    "the_last_kids_on_earth": {
+        "title": "The Last Kids on Earth",
+        "overview": "Um garoto de 13 anos e seus melhores amigos enfrentam hordas de zumbis e monstros gigantes após o apocalipse.",
+        "company": "Netflix",
+        "release_year": 2019,
+        "featured": true,
+        "cover": "/covers/tvshows/last-kids.png",
+        "seasons": 3
+    }
+}
