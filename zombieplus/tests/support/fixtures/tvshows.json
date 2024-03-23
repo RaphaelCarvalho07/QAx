@@ -5,8 +5,8 @@
         "company": "Amazon Studios",
         "release_year": 2010,
         "featured": true,
-        "cover": "/covers/tvshows/twd.png",
-        "seasons": 11
+        "cover": "/covers/tvshows/twd.jpeg",
+        "seasons": "11"
     },
     "fear_the_walking_dead": {
         "title": "Fear the Walking Dead",
@@ -14,8 +14,8 @@
         "company": "Lionsgate Films",
         "release_year": 2015,
         "featured": true,
-        "cover": "/covers/tvshows/ftwd.png",
-        "seasons": 7
+        "cover": "/covers/tvshows/ftwd.jpeg",
+        "seasons": "7"
     },
     "z_nation": {
         "title": "Z Nation",
@@ -23,8 +23,8 @@
         "company": "Walt Disney Studios",
         "release_year": 2014,
         "featured": false,
-        "cover": "/covers/tvshows/znation.png",
-        "seasons": 5
+        "cover": "/covers/tvshows/znation.jpg",
+        "seasons": "5"
     },
     "black_summer": {
         "title": "Black Summer",
@@ -32,8 +32,8 @@
         "company": "Netflix",
         "release_year": 2019,
         "featured": false,
-        "cover": "/covers/tvshows/black-summer.png",
-        "seasons": 2
+        "cover": "/covers/tvshows/black-summer.jpg",
+        "seasons": "2"
     },
     "the_last_kids_on_earth": {
         "title": "The Last Kids on Earth",
@@ -41,7 +41,7 @@
         "company": "Netflix",
         "release_year": 2019,
         "featured": true,
-        "cover": "/covers/tvshows/last-kids.png",
-        "seasons": 3
+        "cover": "/covers/tvshows/last-kids.jpg",
+        "seasons": "3"
     }
 }
