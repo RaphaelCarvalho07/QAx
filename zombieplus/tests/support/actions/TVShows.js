@@ -4,12 +4,15 @@ export class TVShows {
   constructor(page) {
     this.page = page;
   }
-
-  async goForm() {
+  async visit() {
     await this.page.getByRole("link", { name: /^Séries/ }).click();
     await expect(
       this.page.getByRole("heading", { name: /^Séries/ })
     ).toBeVisible();
+  }
+
+  async goForm() {
+    await this.visit();
     await this.page.locator('a[href$="register"]').click();
     await expect(this.page.url()).toContain(`/admin/tvshows/register`);
   }
@@ -18,7 +21,6 @@ export class TVShows {
     await this.page.getByRole("button", { name: "Cadastrar" }).click();
   }
 
-  // preciso finalizar essa função
   async create(tvshow) {
     const { title, overview, company, release_year, seasons } = tvshow;
 
@@ -44,8 +46,8 @@ export class TVShows {
     await this.page.locator('input[name="seasons"]').type(seasons);
 
     await this.page
-    .locator("input[name=cover]")
-    .setInputFiles(`tests/support/fixtures/${tvshow.cover}`);
+      .locator("input[name=cover]")
+      .setInputFiles(`tests/support/fixtures/${tvshow.cover}`);
 
     tvshow.featured
       ? await this.page.locator(".featured .react-switch").click()

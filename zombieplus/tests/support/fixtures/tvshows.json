@@ -8,13 +8,13 @@
         "cover": "/covers/tvshows/twd.jpeg",
         "seasons": "11"
     },
-    "fear_the_walking_dead": {
+    "to_remove": {
         "title": "Fear the Walking Dead",
         "overview": "Um spin-off de The Walking Dead, situado em Los Angeles, seguindo dois famílias que devem se unir para sobreviver ao apocalipse zumbi.",
         "company": "Lionsgate Films",
         "release_year": 2015,
         "featured": true,
-        "cover": "/covers/tvshows/ftwd.jpeg",
+        "cover": "/covers/tvshows/ftwd.png",
         "seasons": "7"
     },
     "z_nation": {

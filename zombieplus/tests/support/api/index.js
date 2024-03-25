@@ -35,46 +35,34 @@ export class Api {
     return body.data[0].id;
   }
 
-  async postMovie(movie) {
-    const companyId = await this.getCompanyIdByName(movie.company);
+  async postMedia(media, type) {
+    const companyId = await this.getCompanyIdByName(media.company);
 
-    const response = await this.request.post("http://localhost:3333/movies", {
+    let url = "http://localhost:3333/movies";
+    let multipart = {
+      title: media.title,
+      overview: media.overview,
+      company_id: companyId,
+      release_year: media.release_year,
+      featured: media.featured,
+    };
+
+    if (type === "tvshow") {
+      url = "http://localhost:3333/tvshows";
+      multipart = { ...multipart, seasons: media.seasons };
+    }
+
+    const response = await this.request.post(url, {
       headers: {
         Authorization: `Bearer ${this.token}`,
         ContentType: "multipart/form-data",
         Accept: "application/json, text/plain, */*",
       },
-      multipart: {
-        title: movie.title,
-        overview: movie.overview,
-        company_id: companyId,
-        release_year: movie.release_year,
-        featured: movie.featured,
-      },
+      multipart: multipart,
     });
 
     expect(response.ok()).toBeTruthy();
-  }
 
-  async postTvShow(tvshow) {
-    const companyId = await this.getCompanyIdByName(tvshow.company);
-
-    const response = await this.request.post("http://localhost:3333/tvshows", {
-      headers: {
-        Authorization: `Bearer ${this.token}`,
-        ContentType: "multipart/form-data",
-        Accept: "application/json, text/plain, */*",
-      },
-      multipart: {
-        title: tvshow.title,
-        overview: tvshow.overview,
-        company_id: companyId,
-        release_year: movie.release_year,
-        seasons: tvshow.seasons,
-        featured: movie.featured,
-      },
-    });
-    
-    expect(response.ok()).toBeTruthy();
+    return response;
   }
 }

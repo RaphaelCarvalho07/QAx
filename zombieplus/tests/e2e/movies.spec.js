@@ -19,7 +19,7 @@ test("deve poder cadastrar um novo filme", async ({ page }) => {
 
 test("deve poder remover um filme", async ({ page, request }) => {
   const movie = data.to_remove;
-  await request.api.postMovie(movie);
+  await request.api.postMedia(movie);
 
   await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
   await page.components.remove(movie.title);
@@ -28,7 +28,7 @@ test("deve poder remover um filme", async ({ page, request }) => {
 
 test("não deve cadastrar filme duplicado", async ({ page, request }) => {
   const movie = data.duplicate;
-  await request.api.postMovie(movie);
+  await request.api.postMedia(movie);
 
   await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
   await page.movies.create(movie);
@@ -63,9 +63,9 @@ test("deve realizar busca pelo termo zumbi", async ({ page, request }) => {
   // movies.data.forEach(async (m) => {
   //   await request.api.postMovie(m);
   // });
-  await request.api.postMovie(movie1);
-  await request.api.postMovie(movie2);
-  await request.api.postMovie(movie3);
+  await request.api.postMedia(movie1);
+  await request.api.postMedia(movie2);
+  await request.api.postMedia(movie3);
 
   await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
   await page.movies.search(input);
