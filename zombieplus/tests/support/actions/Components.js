@@ -18,4 +18,8 @@ export class Components {
       .click();
     await this.page.click(".confirm-removal");
   }
+
+  async alertHaveText(target) {
+    await expect(this.page.locator(".alert")).toHaveText(target);
+  }
 }

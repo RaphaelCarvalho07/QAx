@@ -45,7 +45,7 @@ test("não deve cadastrar filme quando os campos obrigatórios não são preench
   await page.movies.goForm();
   await page.movies.submit();
 
-  await page.movies.alertHaveText([
+  await page.components.alertHaveText([
     "Campo obrigatório",
     "Campo obrigatório",
     "Campo obrigatório",

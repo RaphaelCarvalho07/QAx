@@ -43,7 +43,7 @@ test("não deve cadastrar com email incorreto", async ({ page }) => {
   await page.leads.openLeadModal()
   await page.leads.submitLeadForm('Koi Targaryen', 'koi.com')
 
-  await page.leads.alertHaveText("Email incorreto")
+  await page.components.alertHaveText("Email incorreto")
 });
 
 test("não deve cadastrar quando o nome não é preenchido", async ({ page }) => {
@@ -52,7 +52,7 @@ test("não deve cadastrar quando o nome não é preenchido", async ({ page }) =>
   await page.leads.openLeadModal()
   await page.leads.submitLeadForm('', 'koi@targaryen.com')
 
-  await page.leads.alertHaveText("Campo obrigatório");
+  await page.components.alertHaveText("Campo obrigatório");
 });
 
 test("não deve cadastrar quando o email não é preenchido", async ({ page }) => {
@@ -61,7 +61,7 @@ test("não deve cadastrar quando o email não é preenchido", async ({ page }) =
   await page.leads.openLeadModal()
   await page.leads.submitLeadForm('Koi Targaryen', '')
 
-  await page.leads.alertHaveText("Campo obrigatório");
+  await page.components.alertHaveText("Campo obrigatório");
 });
 
 test("não deve cadastrar quando nenhum campo é preenchido", async ({ page }) => {
@@ -70,5 +70,5 @@ test("não deve cadastrar quando nenhum campo é preenchido", async ({ page }) =
   await page.leads.openLeadModal()
   await page.leads.submitLeadForm('', '')
 
-  await page.leads.alertHaveText(['Campo obrigatório', 'Campo obrigatório']);
+  await page.components.alertHaveText(['Campo obrigatório', 'Campo obrigatório']);
 });

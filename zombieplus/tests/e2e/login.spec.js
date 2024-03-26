@@ -17,23 +17,23 @@ test("não deve logar com senha incorreta", async ({ page }) => {
 test("não deve logar quando o email é inválido", async ({ page }) => {
   await  page.login.visit()
   await  page.login.submit('www.koi.com', 'abc123')
-  await  page.login.alertHaveText('Email incorreto')
+  await  page.components.alertHaveText('Email incorreto')
 })
 
 test("não deve logar quando o email não é preenchido", async ({ page }) => {
   await  page.login.visit()
   await  page.login.submit('', 'abc123')
-  await  page.login.alertHaveText('Campo obrigatório')
+  await  page.components.alertHaveText('Campo obrigatório')
 })
 
 test("não deve logar quando a senha não é preenchida", async ({ page }) => {
   await  page.login.visit()
   await  page.login.submit('koi@targaryen.com', '')
-  await  page.login.alertHaveText('Campo obrigatório')
+  await  page.components.alertHaveText('Campo obrigatório')
 })
 
 test("não deve logar quando nenhum campo é preenchido", async ({ page }) => {
   await  page.login.visit()
   await  page.login.submit('', '')
-  await  page.login.alertHaveText(['Campo obrigatório', 'Campo obrigatório'])
+  await  page.components.alertHaveText(['Campo obrigatório', 'Campo obrigatório'])
 })

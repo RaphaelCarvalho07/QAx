@@ -56,8 +56,4 @@ export class Movies {
     const rows = this.page.getByRole("row");
     await expect(rows).toContainText(content);
   }
-
-  async alertHaveText(target) {
-    await expect(this.page.locator(".alert")).toHaveText(target);
-  }
 }
