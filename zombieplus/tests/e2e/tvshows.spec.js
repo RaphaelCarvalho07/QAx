@@ -58,7 +58,7 @@ test("não deve cadastrar filme quando os campos obrigatórios não são preench
   ]);
 });
 
-test('deve realizar busca pelo termo "zumbi"', async ({ page, request }) => {
+test('deve realizar busca pelo termo "zombies"', async ({ page, request }) => {
   const tvshow1 = data.search1;
   const tvshow2 = data.search2;
   const tvshow3 = data.search3;
@@ -73,5 +73,14 @@ test('deve realizar busca pelo termo "zumbi"', async ({ page, request }) => {
   await page.components.search(input);
 
   await page.components.tableHave(outputs);
-  
+});
+
+test("Termo de busca não encontrado", async ({ page }) => {
+
+    await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
+    await page.tvshows.visit();
+
+    await page.components.search("notfound");
+
+    await page.components.verifyMessageIsVisible("Nenhum registro encontrado!");
 });

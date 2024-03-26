@@ -26,10 +26,14 @@ export class Components {
   async search(target) {
     await this.page.getByPlaceholder("Busque pelo nome").fill(target);
 
-    await this.page.click('.actions button')
+    await this.page.click(".actions button");
   }
   async tableHave(content) {
     const rows = this.page.getByRole("row");
     await expect(rows).toContainText(content);
+  }
+
+  async verifyMessageIsVisible(message) {
+    await expect(this.page.getByText(message)).toBeVisible();
   }
 }

@@ -55,14 +55,14 @@ test("não deve cadastrar filme quando os campos obrigatórios não são preench
 
 test("deve realizar busca pelo termo zumbi", async ({ page, request }) => {
   // const movies = data.search;
+  // movies.data.forEach(async (m) => {
+  //   await request.api.postMovie(m);
+  // });
   const movie1 = data.search1;
   const movie2 = data.search2;
   const movie3 = data.search3;
   const input = "zumbi";
   const outputs = [movie1.title, movie2.title, movie3.title];
-  // movies.data.forEach(async (m) => {
-  //   await request.api.postMovie(m);
-  // });
   await request.api.postMedia(movie1);
   await request.api.postMedia(movie2);
   await request.api.postMedia(movie3);
@@ -72,3 +72,12 @@ test("deve realizar busca pelo termo zumbi", async ({ page, request }) => {
 
   await page.components.tableHave(outputs);
 });
+
+test('Termo de busca não encontrado', async({ page }) => {
+  
+  await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
+  
+  await page.components.search("notfound");
+
+  await page.components.verifyMessageIsVisible("Nenhum registro encontrado!");
+})
