@@ -42,16 +42,36 @@ test("não deve cadastrar série de TV duplicada", async ({ page, request }) => 
   );
 });
 
-test("não deve cadastrar filme quando os campos obrigatórios não são preenchidos", async ( { page }) => {
-    await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
-    await page.tvshows.goForm();
-    await page.tvshows.submit(); // refatorar para tvshows e movies o botão submit
+test("não deve cadastrar filme quando os campos obrigatórios não são preenchidos", async ({
+  page,
+}) => {
+  await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
+  await page.tvshows.goForm();
+  await page.tvshows.submit(); // refatorar para tvshows e movies o botão submit
 
-    await page.components.alertHaveText([
-      "Campo obrigatório",
-      "Campo obrigatório",
-      "Campo obrigatório",
-      "Campo obrigatório",
-      "Campo obrigatório (apenas números)",
-    ]);
-})
+  await page.components.alertHaveText([
+    "Campo obrigatório",
+    "Campo obrigatório",
+    "Campo obrigatório",
+    "Campo obrigatório",
+    "Campo obrigatório (apenas números)",
+  ]);
+});
+
+test('deve realizar busca pelo termo "zumbi"', async ({ page, request }) => {
+  const tvshow1 = data.search1;
+  const tvshow2 = data.search2;
+  const tvshow3 = data.search3;
+  const input = "zombies";
+  const outputs = [tvshow1.title, tvshow2.title, tvshow3.title];
+  await request.api.postMedia(tvshow1, "tvshow");
+  await request.api.postMedia(tvshow2, "tvshow");
+  await request.api.postMedia(tvshow3, "tvshow");
+
+  await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
+  await page.tvshows.visit();
+  await page.components.search(input);
+
+  await page.components.tableHave(outputs);
+  
+});

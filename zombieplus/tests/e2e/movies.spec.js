@@ -68,7 +68,7 @@ test("deve realizar busca pelo termo zumbi", async ({ page, request }) => {
   await request.api.postMedia(movie3);
 
   await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
-  await page.movies.search(input);
+  await page.components.search(input);
 
-  await page.movies.tableHave(outputs);
+  await page.components.tableHave(outputs);
 });

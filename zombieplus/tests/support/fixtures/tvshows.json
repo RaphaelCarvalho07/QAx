@@ -26,8 +26,8 @@
         "cover": "/covers/tvshows/znation.jpg",
         "seasons": "5"
     },
-    "black_summer": {
-        "title": "Black Summer",
+    "search1": {
+        "title": "Black Summer of Zombies",
         "overview": "Nos primeiros dias de um apocalipse zumbi, uma mãe se separa de sua filha e embarca em uma jornada angustiante para encontrá-la.",
         "company": "Netflix",
         "release_year": 2019,
@@ -35,13 +35,22 @@
         "cover": "/covers/tvshows/black-summer.jpg",
         "seasons": "2"
     },
-    "the_last_kids_on_earth": {
-        "title": "The Last Kids on Earth",
+    "search2": {
+        "title": "The Last Kids on Earth of Zombies",
         "overview": "Um garoto de 13 anos e seus melhores amigos enfrentam hordas de zumbis e monstros gigantes após o apocalipse.",
         "company": "Netflix",
         "release_year": 2019,
         "featured": true,
         "cover": "/covers/tvshows/last-kids.jpg",
         "seasons": "3"
+    },
+    "search3": {
+        "title": "Kingdom of Zombies",
+        "overview": "Em uma Coréia do período medieval infestada de zumbis, um príncipe herdeiro é exilado de seu palácio e descobre que a prosperidade de seu reino está ligada a um misterioso vírus mortal.",
+        "company": "Netflix",
+        "release_year": 2019,
+        "featured": true,
+        "cover": "/covers/tvshows/kingdom.jpeg",
+        "seasons": "2"
     }
 }
