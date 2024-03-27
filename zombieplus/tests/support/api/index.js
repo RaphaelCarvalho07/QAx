@@ -1,13 +1,16 @@
+require('dotenv').config();
+
 const { expect } = require("@playwright/test");
 
 export class Api {
   constructor(request) {
+    this.baseApi = process.env.BASE_API;
     this.request = request;
     this.token = undefined;
   }
 
   async setToken() {
-    const response = await this.request.post("http://localhost:3333/sessions", {
+    const response = await this.request.post(`${this.baseApi}/sessions`, {
       data: {
         email: "admin@zombieplus.com",
         password: "pwd123",
@@ -20,7 +23,7 @@ export class Api {
   }
 
   async getCompanyIdByName(companyName) {
-    const response = await this.request.get("http://localhost:3333/companies", {
+    const response = await this.request.get(`${this.baseApi}/companies`, {
       headers: {
         Authorization: `Bearer ${this.token}`,
       },
@@ -38,7 +41,7 @@ export class Api {
   async postMedia(media, type) {
     const companyId = await this.getCompanyIdByName(media.company);
 
-    let url = "http://localhost:3333/movies";
+    let url = `${this.baseApi}/movies`;
     let multipart = {
       title: media.title,
       overview: media.overview,
@@ -48,7 +51,7 @@ export class Api {
     };
 
     if (type === "tvshow") {
-      url = "http://localhost:3333/tvshows";
+      url = `${this.baseApi}/tvshows`;
       multipart = { ...multipart, seasons: media.seasons };
     }
 
