@@ -4,9 +4,9 @@ const { faker } = require('@faker-js/faker')
 
 const { executeSQL } = require("../support/database");
 
-test.beforeAll(async () => {
-  await executeSQL(`DELETE from leads`);
-});
+// test.beforeAll(async () => {
+//   await executeSQL(`DELETE from leads`);
+// });
 
 test("deve cadastrar um lead na fila de espera", async ({ page }) => {
 
